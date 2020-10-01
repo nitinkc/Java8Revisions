@@ -1,6 +1,5 @@
-package com.nitin.fileStream;
+package com.nitin.corona;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

@@ -6,6 +6,8 @@ import com.nitin.transactions.entity.Transactions;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
@@ -13,6 +15,7 @@ import java.util.stream.Collectors;
  * @create on Wednesday, September/30/2020 at 7:43 PM
  */
 
+// https://www.oracle.com/technical-resources/articles/java/architect-streams-pt2.html
 public class TransactionService {
     public static void main(String[] args) {
         List<Transaction> transactions = ReadTransactionsCsv.getData();
@@ -42,7 +45,6 @@ public class TransactionService {
         Double statementSumReduce =
                 getSumCityReduce(transactions);
         System.out.println(statementSumReduce);
-
     }
 
     private static Double getSumCityReduce(List<Transaction> transactions) {

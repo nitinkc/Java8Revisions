@@ -1,4 +1,4 @@
-package com.nitin.fileStream;
+package com.nitin.corona;
 
 import org.apache.commons.lang3.math.NumberUtils;
 
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 public class ReadCsv {
     public static List<Entity> getData () {
-        String file = "src/main/java/com/nitin/fileStream/us_simplified.csv";
+        String file = "src/main/java/com/nitin/corona/us_simplified.csv";
 
         return readFileNreturnList(file);
     }
