@@ -1,4 +1,4 @@
-package com.nitin.zJava8Revisions.stringsWithStreams;
+package com.nitin.stringsWithStreams;
 
 /**
  * Created by nitin on Thursday, February/13/2020 at 10:26 PM
