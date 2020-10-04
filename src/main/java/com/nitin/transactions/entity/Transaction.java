@@ -2,6 +2,7 @@ package com.nitin.transactions.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * @Author Created by nichaurasia
@@ -10,6 +11,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
+@ToString
 public class Transaction {
     private int id;
     private double value;

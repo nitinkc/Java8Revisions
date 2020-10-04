@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
  */
 
 public class ElectionGroups {
-    private static final Comparator<Map.Entry<String, Integer>> valueOrder = Map.Entry.comparingByValue();
+    private static final Comparator<Map.Entry<String, Integer>> valueOrder = Map.Entry.<String, Integer>comparingByValue().reversed();
     private static final Comparator<Map.Entry<String, Integer>> reversedValueOrder = valueOrder.reversed();
 
     public static void main(String[] args) {
@@ -24,8 +24,6 @@ public class ElectionGroups {
         System.out.println("Get all votes by Party");
 
         sumVotesByParty(list);
-
-
     }
 
     private static void sumVotesByParty(List<ElectionEntity> list) {
@@ -35,7 +33,7 @@ public class ElectionGroups {
                 .entrySet()
                 .stream()
                 .sorted(reversedValueOrder)
-                .limit(10)
+                .limit(20)
                 .forEach(l -> System.out.printf("%40s : %5d\n", l.getKey(), l.getValue()));
     }
 }

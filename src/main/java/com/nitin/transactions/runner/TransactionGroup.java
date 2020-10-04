@@ -50,6 +50,18 @@ public class TransactionGroup {
         System.out.println("Get max amount by each City");
 
         getMaxAmountByCity(transactions);
+
+
+        transactions.stream()
+                .collect(Collectors.groupingBy(Transaction::getCity,
+                        Collectors.maxBy(Comparator.comparingDouble(Transaction::getValue))))
+                .values()
+                .stream()
+                .filter(Optional::isPresent)
+                .map(Optional::get)
+                .sorted(Comparator.comparingDouble(Transaction::getValue).reversed())
+                .limit(10)
+                .forEach(System.out::println);
     }
 
     private static void getMaxAmountByCity(List<Transaction> transactions) {
